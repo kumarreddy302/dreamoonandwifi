@@ -1,0 +1,112 @@
+<html>
+    <title>DREAMOON AND WIFI SOLUTION IN PYTHON</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap" rel="stylesheet"> 
+<div class="container heading">
+    <div class="row">
+      <div class="col-lg-12 col-lg-4 headu">
+            <head><h1><center>DREAMOON AND WIFI SOLUTION</center></h1></head>
+      </div>
+      <div class="col-lg-12 col-lg-4 lhead">
+        <head><h6><center>Codeforce 476B SOLUTION</center></h6></head>
+      </div>     
+  </div>
+ 
+  <body>
+    <div class="container body1">
+        <div class="row">
+            <div class="col-lg-13">
+                <p><h3 class="aim">Aim:</h3><span class="text">Dreamoon is standing at the position 0 on a number line. Drazil is sending a list of commands through Wi-Fi to Dreamoon's smartphone and Dreamoon follows them.
+
+                    <br>Each command is one of the following two types:<br>
+                    
+                       1. Go 1 unit towards the positive direction, denoted as '+'.<br>
+                       2. Go 1 unit towards the negative direction, denoted as '-' .<br>
+                       </span>
+                    <p><h3>Description:</h3><span class="text">But the Wi-Fi condition is so poor that Dreamoon's smartphone reports some of the commands can't be recognized and Dreamoon knows that some of them might even be wrong though successfully recognized. Dreamoon decides to follow every recognized command and toss a fair coin to decide those unrecognized ones (that means, he moves to the 1 unit to the negative or positive direction with the same probability 0.5).
+
+                        You are given an original list of commands sent by Drazil and list received by Dreamoon. What is the probability that Dreamoon ends in the position originally supposed to be final by Drazil's commands?</span></p>
+                    <P>
+                        <h3 id = "Algorithim" class = "aim">ALGORITHM:</h3>
+                        <p><span class = "text">
+                            1.Start.<br>
+                            2.Now find the actual postion of dreamoon i.e the actual postion of dreamoon acording to drazil input.<br>
+                            3.Now find the imaginary postion of dreamoon i.e excluding question marks find the postion of dreamoon and letus assume that position as Rough postion.<br>
+                            4.Now find the all the values that can be replaced in place of questionmark.And find all the posiible rough postion of Dreamoon.<br>
+                            5.Now find the probability that dreamoon that will at actuall postion with repective to probably postion.<br>
+                            6.Display the result.<br>
+                            7.Stop.<br>
+                            </span>
+                        </p>
+                    </P>
+                    <p>
+                        <h3 class="aim">Test Cases:</h3>
+                        <h4 class="aim">Input:</h4>
+                        <p><span class="text">Drazil Input is :<br>
+                            ++--<br>
+                            <br>
+                            Dreamoon Input is :<br>
+                            +-??<br>
+                            <h4>Output:</h4>
+                            <span class="text">
+                            0.500000000000<br></span>
+                            </span>    
+                        </p>
+                    </p>
+                    <p>
+                        <br>
+                        <h3 id = "Explanation" class="aim">Explanation:</h3>
+                        <span class="text">
+                        Here the orginal inputs sent by drazil is ++--.<br>
+                        As the first input is '+' the dreamoon will move 1 step forward and the position of dreamoon will be at 1.<br>
+                        As the second input is '+' the dreamoon will move 1 step forward and the position of dreamoon will be at 2.<br>
+                        As the third input is '-' the dreamoon will move 1 step backward and the position of dreamoon will be at 1.<br>
+                        As the fourth input is '-' the dreamoon will move 1 step backward and the position of dreamoon will be at 0.<br>
+                        The actual postion of Dreamoon is "0" now.<br>
+                        <br>
+                        the dreamoon recived an input is +-??.<br>
+                        Now the possible postion of dreamoon will be determined by assuming the all the possible values that can be replaced in place of '?'.<br>
+                        1.The first possible case is + - + + .<br>
+                        2.The second possible case is + - + - . <br>
+                        3.The Third possible case is + - - + .<br>
+                        4.The Fourth possible case is + - - - .<br> 
+                        So,in the first case the dreamoon position will be at '2' as first the input is '+' the dreamoon will move one step forward,in second Input the dreamoon have an input '-' it moves one step backward,in next stage it will move one step forward and after another step forward.<br>
+                        In Second case the postion of dreamoon will be at 0.<br>
+                        In third case the position of dreamoon will be at 0.<br>
+                        In fourth case the postion of Dreamoon will be at -2.<br>
+                        By combining all the the cases we will get a set of possible outputs as {2,0,0,-2}<br>
+                        <br>
+                        Our Actuall output was 0 and we have the two '0' in our set out of entire 4 outputs.<br>
+                        So, the probability is 2/4 = 0.500000000000.<br>
+                        </span>
+                        <br>
+                        <br>
+                        <h1 id = "Sourcecode" class="aim">Source code is available in Github Link pls go there.</h1><a href="https://github.com/kumarreddy302/Dreammoon-and-Wifi/blob/main/index.py">click here.</a>
+                        <br>
+                        <br>
+                        <h3 id = "Vedioexplanation" class="aim">Vedio Explanation</h3>
+                        <br>
+                        <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ul2XMfiS7ZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
+                </p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
